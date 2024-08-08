@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+.App {
+  height:710px;
+  display:grid;
+  grid-template-columns: 1fr 4fr;
+  font-family: 'Quicksand',Arial, sans-serif;
+  line-height: 1.3em;
+  letter-spacing: 0.04em;
+}
+.side{
+width:300px;
+}
+.main{
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+p{
+  color: rgba(0, 0, 0, 0.7);
+ font-weight: normal;
+}
+
+
+/*//////////////// Media Query/////////////////*/
+
+
+@media (max-width:992px){
+  .App{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+  }
+  h2{
+    font-weight: bold;
+  }
+  p{
+    font-weight: bolder;
+  }
+  .main{
+    margin-top: -40px;
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width:769px){
+  .App{
+     display: flex;
+    flex-direction: column;
+
+  }
+  .main{
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+}
+
+/*//////////////// Nuevos /////////////////*/
+
+/*
+INTRO
+*/
+
+.intro {
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+.intro .intro-content {
+  text-align: center;
+  position: absolute;
+}
+
+.intro .overlay-intro {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .9;
+}
+
+.intro .intro-title {
+  color: #fff;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.intro .intro-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.intro-single {
+  height: 350px;
+}
+
+.intro-single .intro-content {
+  margin-top: 30px;
+}
+
+.intro-single .intro-title {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.intro-single .breadcrumb {
+  background-color: transparent;
+  color: #0078ff;
+}
+
+.intro-single .breadcrumb .breadcrumb-item:before {
+  color: #cde1f8;
+}
+
+.intro-single .breadcrumb .breadcrumb-item.active {
+  color: #cde1f8;
+}
+
+.intro-single .breadcrumb a {
+  color: #fff;
+}
+
+.display-table {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.intro .text-slider-items {
+  font-weight: bolder;
+  color: #fff;
+}
+
+.btn-intro{
+  margin: 10px;
+}

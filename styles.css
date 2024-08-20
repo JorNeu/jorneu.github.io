@@ -114,6 +114,7 @@ body{
 .FirstElement .profile-photo{
   width: 300px;
   height:  300px;
+  min-height: 300px;
   border-radius: 50%;
   overflow: hidden;
   border: 15px solid #444444;
@@ -327,20 +328,22 @@ profile-photo .img{
 }
 .projects{
   display: flex;
-  justify-content:space-between;
+  justify-content:center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 .project{
     /* padding: 30px 15px; */
     color: #e5e5e5;
     border: 2px solid #e5e5e5;
     border-radius: 10px;
-    width: 100%;
+    width: 90%;
     position: relative;
     padding: 25px;
     text-align: center;
     flex-basis: 32%;
     transition: .3s;
+    min-width: 270px;
 }
 .project i{
   background-color: #fed700;
@@ -436,6 +439,7 @@ profile-photo .img{
   .container{
     width: 970px;
   }
+  
   .roadmap{
     margin-bottom: 300px;
   }
@@ -444,7 +448,11 @@ profile-photo .img{
 @media(max-width:1050px){
   .FirstElement{ 
     flex-direction: column;
-    padding-top: 2rem;
+    padding-top: 6rem;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 900px;
   }
   .profile-text{
     padding: 40px 0px;
@@ -457,7 +465,8 @@ profile-photo .img{
 @media only screen and (min-width:768px) and (max-width:999px){
   .container{
     width: 750px;
-  } 
+  }
+  
   .roadmap{
     margin-bottom: 500px;
   }
@@ -475,10 +484,14 @@ profile-photo .img{
 /* Mobile Layout */
 @media only screen and (max-width:767px){
   .container{
-    width: 350px;
+    width: 80%;
+    min-width: 340px;
+
+    margin: 0px 5px;
+    margin-left: 3vh;
   }
   .header .menu_icon {
-    display: block;
+    display: none;
   }
   .header ul{
     display: none;
@@ -489,14 +502,18 @@ profile-photo .img{
   .profile-text{
     width: 350px;
   }
-  
-  .FirstElement .profile-text p{
-    text-align: justify;
-  }
+  .FirstElement{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    height: 900px;
+}
   .about{
     flex-direction: column;
     flex-basis: 100%;
     margin-bottom: 30px;
+    justify-content: center;
   }
   .about-skills{
     width: 100%;

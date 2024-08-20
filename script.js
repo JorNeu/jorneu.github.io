@@ -65,15 +65,15 @@ $(document).ready(function() {
     });
 
   //contact form to excel sheet
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzUSaaX3XmlE5m9YLOHOBrRuCh2Ohv49N9bs4bew7xPd1qlgpvXtnudDs5Xhp3jF-Fx/exec';
-  const form = document.forms['submitToGoogleSheet']
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxboklNmaZswwG2VfogEBIsvInQk9Ped3rECnOtU4bZ89EWo3kHGVa69hktSJqH26EUyw/exec';
+  const form = document.forms['contact-form']
   const msg = document.getElementById("msg")
 
   form.addEventListener('submit', e => {
       e.preventDefault()
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
           .then(response => {
-              msg.innerHTML = "Message sent successfully"
+              msg.innerHTML = "Mensaje enviado, gracias por contactarme"
               setTimeout(function () {
                   msg.innerHTML = ""
               }, 5000)

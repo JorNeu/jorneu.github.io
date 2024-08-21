@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="apidb.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>apidb</title>
+</head>
+
+<body class="body">
+  <header class="container-fluid header">            
+    <div class="row d-flex align-items-center div-header">
+      <div class="col-md-5 f-flex div-header">
+        
+        <h2 class="tittleh2"><span class="material-symbols-outlined">
+            interactive_space
+            </span>CAC-movies</h2>  
+        
+    </div>
+    <div class="col-md-7 d-flex buttons-header">
+        <button class="button-header"><a href="apidb.html">Tendencias</a></button>
+        <button class="button-header"><a href="registro.html">Registrarse</a></button>
+        <button class="button-header ini"><a href="login.html">Iniciar Sesión</a></button>
+        <button class="button-header ini"><a href="apidb.html">Conexion Api</a></button>
+    </div>
+    </div>
+  </header>
+
+
+  <main class="container-fluid main">
+      <div class="row d-flex div-main">
+        <div class="col-12 img-contain cont-imagen">
+          <div class=" cont-imagen">
+          <img src="imagen1.jpg" alt="" class="imagen">
+        </div>
+         </div>
+          <div class="col-12 div-main-titulo"> 
+            <h1 class="main-titulo">Películas y series ilimitadas<br> en un solo lugar</h1>
+            <h5 class="main-h5">Disfruta donde quieras.<br> Cancela en cualquier momento.</h5>
+            <button class="button-main-registrate" ><a href="registro.html">Registrate</a></button>
+          </div>
+        </div>
+
+    <div class="row d-flex div-busqueda">
+
+      <div class="col-12 cont-busqueda">
+          <h2 class="h2-busqueda"> ¿Qué estas buscando para ver?</h2>
+          <form action="/buscar" method="GET">
+            <input class="form-busqueda" type="text" id="buscar" name="q" placeholder="      Buscar...">
+            <button class="boton-busqueda" type="submit">Buscar</button>
+        </form>
+        <span class="linea"></span>
+      </div>
+    
+    </div>
+     
+    <container class="container pelis">
+      <div class="row div-galeria justify-content-center">
+        <h2 class="h2-busqueda"> Las tendencias de hoy</h2>
+        <div id="trending-pelis" class="row"></div> <!-- Contenedor para las películas de tendencia -->
+        <div class="col-12 button-container">
+          <button class="button-main-catalogo" >anterior</button>
+          <button class="button-main-catalogo" >siguiente</button>
+        </div>
+      </div> 
+      
+      <span class="linea"></span>
+      <div class="col-12 cont-busqueda">
+        <h2 class="h2-busqueda"> Las más aclamadas</h2>
+      </div>
+      <div id="top-rated-pelis" class="col-12 mas-buscadas"></div> <!-- Contenedor para las películas más aclamadas -->
+    </container>
+
+    </main>
+    
+
+    <footer class="container-fluid footer">
+      <div class="row align-items-center div-footer">
+        <div class="col-12 buttons-footer">
+          <button class="button-footer xlbutton">Terminos y condiciones</button>
+        
+          <button class="button-footer xlbutton">Preguntas frecuentes</button>
+       
+          <button class="button-footer">ayuda</button>
+       
+          <button class="button-footer adm">Administrador Peliculas</button>
+        
+      </div>
+    </footer>
+    <script src="apidb.js"></script> 
+</body>
+</html>

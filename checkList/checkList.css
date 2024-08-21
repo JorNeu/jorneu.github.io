@@ -1,0 +1,501 @@
+
+/* 
+normalize:
+
+<link rel="stylesheet" type="text/css" href="../normalize.css"> https://necolas.github.io/normalize.css/8.0.1/normalize.css 
+y editarle 
+
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+fonts:
+<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&family=Exo:ital,wght@0,100;0,200;1,100&family=Oleo+Script+Swash+Caps&family=Quicksand:wght@300;400&family=Square+Peg&family=Uchen&display=swap" rel="stylesheet">
+
+
+font-family: 'Dosis', sans-serif;
+font-family: 'Exo', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Square Peg', cursive;
+font-family: 'Uchen', serif; */
+
+ 
+/*______________________________normalize + grid____________________________________________________________________________________*/
+* {
+	font-family: 'Quicksand', sans-serif;
+  padding: 0px;
+  margin: 0px;
+}
+.grid-container {
+	display: grid;
+  grid-template-columns: repeat(4, 1fr)70px;
+  grid-template-rows: repeat(5, 1fr) 89px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+/*______________________main__________________________________________*/
+.grid-container_main {
+  grid-area: 1 / 1 / 6 / 5; 
+  
+}
+/*______________________taskgrid__________________________________________*/
+.h2CheckList {
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  color:#4b51a4;
+  display: block;
+  background-color:#fdfdfd;
+}
+.checklist {
+  --background: #fff;
+  --text: #414856;
+  --check: #4f29f0;
+  --disabled: #c3c8de;
+  --width: 100%;
+  --height: 50px;
+  --border-radius: 10px;
+  background: var(--background);
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  position: relative;
+  box-shadow: 0 10px 30px rgba(65, 72, 86, 0.05);
+  padding: 2px 10px;
+  display: grid;
+  grid-template-columns: 30px auto;
+  align-items: center;
+  justify-content: left;
+}
+
+.checklist label {
+  color: var(--text);
+  position: relative;
+  cursor: pointer;
+  display: grid;
+  align-items: center;
+  width: fit-content;
+  transition: color 0.3s ease;
+  margin-right: 20px;
+}
+
+.checklist label::before, .checklist label::after {
+  content: "";
+  position: absolute;
+}
+
+.checklist label::before {
+  height: 2px;
+  width: 8px;
+  left: -27px;
+  background: var(--check);
+  border-radius: 2px;
+  transition: background 0.3s ease;
+}
+
+.checklist label:after {
+  height: 4px;
+  width: 4px;
+  top: 8px;
+  left: -25px;
+  border-radius: 50%;
+}
+
+.checklist input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  height: 15px;
+  width: 15px;
+  outline: none;
+  border: 0;
+  margin: 0 15px 0 0;
+  cursor: pointer;
+  background: var(--background);
+  display: grid;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.checklist input[type="checkbox"]::before, .checklist input[type="checkbox"]::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  top: auto;
+  background: var(--check);
+  border-radius: 2px;
+}
+
+.checklist input[type="checkbox"]::before {
+  width: 0px;
+  right: 60%;
+  transform-origin: right bottom;
+}
+
+.checklist input[type="checkbox"]::after {
+  width: 0px;
+  left: 40%;
+  transform-origin: left bottom;
+}
+
+.checklist input[type="checkbox"]:checked::before {
+  animation: check-01 0.4s ease forwards;
+}
+
+.checklist input[type="checkbox"]:checked::after {
+  animation: check-02 0.4s ease forwards;
+}
+
+.checklist input[type="checkbox"]:checked + label {
+  color: var(--disabled);
+  animation: move 0.3s ease 0.1s forwards;
+}
+
+.checklist input[type="checkbox"]:checked + label::before {
+  background: var(--disabled);
+  animation: slice 0.4s ease forwards;
+}
+
+.checklist input[type="checkbox"]:checked + label::after {
+  animation: firework 0.5s ease forwards 0.1s;
+}
+
+@keyframes move {
+  50% {
+    padding-left: 8px;
+    padding-right: 0px;
+  }
+
+  100% {
+    padding-right: 4px;
+  }
+}
+
+@keyframes slice {
+  60% {
+    width: 100%;
+    left: 4px;
+  }
+
+  100% {
+    width: 100%;
+    left: -2px;
+    padding-left: 0;
+  }
+}
+
+@keyframes check-01 {
+  0% {
+    width: 4px;
+    top: auto;
+    transform: rotate(0);
+  }
+
+  50% {
+    width: 0px;
+    top: auto;
+    transform: rotate(0);
+  }
+
+  51% {
+    width: 0px;
+    top: 8px;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    width: 5px;
+    top: 8px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes check-02 {
+  0% {
+    width: 4px;
+    top: auto;
+    transform: rotate(0);
+  }
+
+  50% {
+    width: 0px;
+    top: auto;
+    transform: rotate(0);
+  }
+
+  51% {
+    width: 0px;
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+
+  100% {
+    width: 10px;
+    top: 8px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes firework {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0, 0 0 0 -2px #4f29f0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    box-shadow: 0 -15px 0 0px #4f29f0, 14px -8px 0 0px #4f29f0, 14px 8px 0 0px #4f29f0, 0 15px 0 0px #4f29f0, -14px 8px 0 0px #4f29f0, -14px -8px 0 0px #4f29f0;
+  }
+}
+
+.taskList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  bottom: 60px;
+}
+.task{
+  padding: 5px 15px;
+  color: #212121;
+  z-index: 1;
+  background: #ffffff;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 150ms;
+ }
+ .task::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3%;
+  width: 0;
+  background-color: #5c5c5c;
+  z-index: -1;
+  transition: all 500ms
+ }
+ .task:hover {
+  color: #c2bfbf;
+ }
+ .task:hover::before {
+  width: 100%;
+ }
+ .task:focus{
+  color: #000000;
+  z-index: 1;
+  background-color: #6b73e6;
+  position: relative;
+ }
+
+.taskForm {
+  grid-column: (1 / 3);
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: #f1f1f1;
+  z-index: 999;
+}
+.labelForm {
+  padding: 6px 14px;
+  font-size:19px;
+}
+
+.inputTask [type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.formButton {
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.formButton:hover {
+  background-color: #3e8e41;
+}
+ /*_____________________boton y animacion de checkbox__________________________________________*/ 
+
+/*______________________aside__________________________________________*/
+.grid-container_aside { 
+	position: relative;
+	grid-area: 1 / 5 / 6 / 6; 
+  background-color: #ffffff;
+  z-index: 70;
+  overflow: auto;
+  padding-bottom: 100vh;
+  border-left: 1px solid #6b73e6;
+}
+.nav-ul {
+  position: fixed;
+  text-align: left;
+  align-items: left;
+  }
+  .nav-ul__li {
+  display: inline-block;
+  padding: 15px 1px 1px 15px;
+  margin: 4px;
+  }
+  .button-aside {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    border: 3px;
+    background: none;
+    font-weight: 600;
+    box-sizing: 20px;
+  }
+  .aside-icon{
+    padding: 5px;
+  }
+  .nav-ul__li--link{
+    text-decoration: none;
+    color:#6b73e6
+  }
+  .nav-ul__li--text{
+    display: none;
+    color:#6b73e6
+  text-decorationñ none;
+  }
+  .asideTittle{
+    display: none;
+    text-align: center;
+  }
+/*_____________________footer___________________________________________*/
+.grid-container_footer { 
+	grid-area: 6 / 1 / 7 / 6;  
+}
+.footer-container {
+  width: 2px;
+  font-size: 12px;
+  line-height: 10px;
+  font-family: 'Muli';
+  color: white;
+  background-color: #494949;
+  left: 25px;
+  grid-column: (1 / 3);
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 999;
+}
+.footer-container:before {
+  content: '[';
+  position: absolute;
+  left: -15px;
+  line-height: 5px;
+}
+.footer-container:after {
+  content: ']';
+  position: absolute;
+  right: -250px;
+  line-height: 4px;
+}
+.footer-container:after,
+.footer-container:before {
+  color: #6b73e6;
+  font-size: 25px;
+  animation: 2s linear 0s normal none infinite opacity;
+  -webkit-animation: 2s ease-out 0s normal none infinite opacity;
+  -moz-animation: 2s ease-out 0s normal none infinite opacity;
+  -o-animation: 2s ease-out 0s normal none infinite opacity;
+}
+.footer-container__visible {
+  float: left;
+  font-weight: 600;
+  overflow: hidden;
+  height: 14px;
+}
+.footer-container__p {
+  display: inline;
+  float: left;
+  margin: 10;
+}
+.footer-container__ul {
+  padding-left: 175px;
+  text-align: left;
+  list-style: none;
+  animation: 6s linear 0s normal none infinite change;
+  -webkit-animation: 6s linear 0s normal none infinite change;
+  -moz-animation: 6s linear 0s normal none infinite change;
+  -o-animation: 6s linear 0s normal none infinite change;
+}
+.footer-container__li {
+  line-height: 9.8px;
+  margin: 20;
+}
+.footer-container__animation--pos{
+	display: flex;
+	position: static;
+  margin:14px;
+}
+@keyframes opacity {
+  0%   {opacity:0;}
+  50%  {opacity:1;}
+  100% {opacity:0;}
+}
+@keyframes change {
+  0%   {margin-top:0;}
+  15%  {margin-top:0;}
+  25%  {margin-top:-20px;}
+  40%  {margin-top:-20px;}
+  50%  {margin-top:-40px;}
+  65%  {margin-top:-40px;}
+  75%  {margin-top:-20px;}
+  85%  {margin-top:-20px;}
+  100% {margin-top:0;}
+}
+/*_________________________desktop view_______________________________________*/
+@media screen and (min-width: 900px){
+	.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr)180px;
+  grid-template-rows: repeat(5, 1fr) 30px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+/*_________________________main_______________________________________*/
+.grid-container_main {
+  grid-area: 1 / 1 / 6 / 5; 
+}
+.checkListDiv {
+  padding-bottom: 59px;
+}
+/*_________________________aside_______________________________________*/
+.grid-container_aside { 
+	grid-area: 1 / 5 / 6 / 6;  
+  
+  z-index: 33;
+}
+.nav-ul__li--text{
+  display: inline-block;
+}
+.asideTittle{
+  padding-top: 60px;
+  color: #6b73e6;
+  display: block;
+}
+/*_________________________footer_______________________________________*/
+.grid-container_footer { 
+	grid-area: 6 / 1 / 7 / 6;
+}

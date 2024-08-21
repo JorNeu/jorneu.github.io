@@ -1,0 +1,15 @@
+html 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&family=Exo:ital,wght@0,100;0,200;1,100&family=Oleo+Script+Swash+Caps&family=Quicksand:wght@300;400&family=Square+Peg&family=Uchen&display=swap" rel="stylesheet">
+
+
+css
+
+font-family: 'Dosis', sans-serif;
+font-family: 'Exo', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Square Peg', cursive;
+font-family: 'Uchen', serif;

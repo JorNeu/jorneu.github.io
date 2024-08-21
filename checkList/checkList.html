@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="checkList.css">
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="icon" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://kit.fontawesome.com/e121b5f71f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&family=Exo:ital,wght@0,100;0,200;1,100&    family=Oleo+Script+Swash+Caps&family=Quicksand:wght@300;400&family=Square+Peg&family=Uchen&display=swap" rel="stylesheet">
+    <title>Check List</title>
+</head>
+<body>  
+<div class="grid-container">     
+  <main class="grid-container_main">
+    <div class="checkListDiv"> 
+        
+        <ul class="taskList">
+            
+        </ul>
+    </div>
+    <form class="taskForm">
+        <input type="hidden" name="data" class="posData" </input> 
+        <label class="labelForm">Agregar tarea:</label>
+        <input type="text" id="new-task" class="inputTask" placeholder="Escribe una nueva tarea">
+        <button type="submit" class="formButton add">Agregar</button>
+        <button class="formButton del" id="delete">Borrar</button>
+      </form>
+  </main>
+    <aside class="grid-container_aside">
+        <nav class="nav">
+            <ul class="nav-ul">
+                <li class="nav-ul__li asideTittle"><div><h2>CHECKLIST! </h2> <button class="button-aside">
+                    </div>  
+                </li><br>
+                <li class="nav-ul__li"><div><button class="button-aside">
+                    <a href="../index/index.html" class="nav-ul__li--link nav-ul__li--icon"><i class="fa-solid fa-house-chimney aside-icon"></i></a>
+                    <a href="../index/index.html" class="nav-ul__li--text nav-ul__li--link">home</a></div>  
+                </li><br>
+                <li class="nav-ul__li"><div><button class="button-aside">
+                    <a href="../queprograme/queprograme.html" class="nav-ul__li--link nav-ul__li--icon"><i class="fa-solid fa-code aside-icon"></i></a>
+                    <a href="../queprograme/queprograme.html" class="nav-ul__li--text nav-ul__li--link">programs</a></div>  
+                </li><br>
+                <li class="nav-ul__li"><div><button class="button-aside">
+                    <a href="../memardos/memardos.html" class="nav-ul__li--link nav-ul__li--icon"><i class="fa-solid fa-poop aside-icon"></i></a>
+                    <a href="../memardos/memardos.html" class="nav-ul__li--text nav-ul__li--link">Memardos</a></div>   
+                </li><br>
+                <li class="nav-ul__li"><div><button class="button-aside">
+                    <a href="../checkList/checkList.html" class="nav-ul__li--link nav-ul__li--icon"><i class="fa-solid fa-list-check aside-icon"></i></a>
+                    <a href="../checkList/checkList.html" class="nav-ul__li--text nav-ul__li--link">check List</a>   
+                </li><br>
+                <li class="nav-ul__li"><div><button class="button-aside">
+                    <a href="../pruebas/pruebas.html" class="nav-ul__li--link nav-ul__li--icon"><i class="fa-solid fa-person-digging aside-icon"></i></a>
+                    <a href="../pruebas/pruebas.html" class="nav-ul__li--text nav-ul__li--link">beta web</a>   
+                </li><br>
+                <li class="nav-ul__li"><div><button class="button-aside">
+                    <a href="../gallery/gallery.html" class="nav-ul__li--link nav-ul__li--icon"><i class="fa-sharp fa-regular fa-images aside-icon"></i></a>
+                    <a href="../gallery/gallery.html" class="nav-ul__li--text nav-ul__li--link">gallery</a>   
+                </li><br>
+            </ul>
+        </nav>        
+    </aside>
+    <footer class="grid-container_footer">
+        <div class="footer-container__animation--pos">
+            <div class="footer-container ">
+                <div class="footer-container__visible">
+                    <p class="footer-container__p">
+                        Gracias por visitar mi pagina!
+                    </p>
+                    <ul class="footer-container__ul">
+                        <li class="footer-container__li">reclutador!</li>
+                        <li class="footer-container__li"> <br> </li>
+                        <li class="footer-container__li">personita!</li>
+                        <li class="footer-container__li"> <br> </li>
+                        <li class="footer-container__li">usuario!</li>
+                        <li class="footer-container__li"> <br> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="checkList.js"></script>
+</body>
+</html>

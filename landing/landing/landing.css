@@ -1,0 +1,316 @@
+
+/* 
+normalize:
+
+<link rel="stylesheet" type="text/css" href="../normalize.css"> https://necolas.github.io/normalize.css/8.0.1/normalize.css 
+y editarle 
+
+*{
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+fonts:
+<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&family=Exo:ital,wght@0,100;0,200;1,100&family=Oleo+Script+Swash+Caps&family=Quicksand:wght@300;400&family=Square+Peg&family=Uchen&display=swap" rel="stylesheet">
+
+
+font-family: 'Dosis', sans-serif;
+font-family: 'Exo', sans-serif;
+font-family: 'Oleo Script Swash Caps', cursive;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Square Peg', cursive;
+font-family: 'Uchen', serif; */
+/*
+.color1 { #230b00 };
+.color2 { #a29d7f };
+.color3 { #d4cfa5 };
+.color4 { #f8ecd4 };
+.color5 { #aabe9b };
+
+/*________________________________estabilizer and grid__________________________________________________________________________________*/
+* {
+font-family: 'Quicksand', sans-serif;
+}
+.body {
+  display: grid;
+  grid-template-columns: 30px repeat(3, 1fr) 30px;
+  grid-template-rows: 20px repeat(3, 1fr) 30px 10px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  background-color: #f8ecd4;
+  }
+/*______________________________header__________________________________*/
+.header{
+  grid-area: 1 / 1 / 2 / 6;  
+}
+/*___________________________main_____________________________________*/
+.main{
+  grid-area: 2 / 2 / 5 / 5;
+}
+.main-header{
+  color: #a29d7f;
+  text-align: center;
+  
+}
+.tittle-header-h2{
+  padding-top: 10px;
+  font-size: 3vw;
+  text-shadow: 6px 6px 7px #fffcee;
+}
+.tittle-header-h1{
+  margin-top: -10px;
+  font-family: "Playball", cursive;
+  font-weight: 350;
+  font-style: normal;
+  font-size: 11vw;
+  padding-bottom: 60px;
+  text-shadow: 6px 6px 7px #fffcee;
+}
+/*___________________________section1_____________________________________*/
+
+.section1{
+  background-color: #fffcee;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 10px 1px;
+  margin: 100px -5px;
+  border-radius: 3px;
+  text-align: center;
+}
+.divimg-section1{
+  flex: auto;
+  margin: 10px;
+  border-radius: 2px;
+}
+.img1-section1{
+  border-radius: 2px;
+}
+.divp-section1{
+}
+.p1-section1{
+  margin: auto;
+  color: #726e59;
+  font-size: 22px;
+  width: calc(100% - 150px);
+}
+/*___________________________section2_____________________________________*/
+.section2{
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  margin: 100px 1px;
+}
+.divimg-section2{
+  background-color: #fffcee;
+  flex: auto;
+  border-radius: 3px;
+  padding: 20px;
+  margin: 15px 5px;
+}
+.img-section2{
+  display: flex;
+  border-radius: 3px;
+  margin: auto;
+  max-width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  
+}
+.p-section2{
+  text-align: center;
+  margin: 10px 0px -10px;
+  font-size: 20px;
+  color: #918c71;
+}
+
+
+}
+/*___________________________section3_____________________________________*/
+.section3{
+}
+.divimg1-section3{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #fffcee;
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin: 10px 17px 15px 10px;
+  min-width: 300px;
+}
+.img1-section3{
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  min-width: 80px;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
+.p1-section3{
+  text-align: center;
+  font-size: 18px;
+  color: #918c71;
+  margin: auto;
+  min-width: 12vh;
+  text-align: center;
+  color: #918c71;
+  margin: 10px;
+  max-width: 600px;
+  min-width: 150px;
+  width: calc(100% - 150px);
+  margin-right: 20px;
+}
+.divimg2-section3{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #fffcee;
+  border-radius: 5px;
+  padding: 10px 25px;
+  margin: 10px 17px 15px 10px;
+  min-width: 300px;
+  
+}
+.img2-section3{
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  min-width: 80px;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.p2-section3{
+  text-align: center;
+  font-size: 18px;
+  color: #918c71;
+  margin: auto;
+  min-width: 12vh;
+  text-align: center;
+  color: #918c71;
+  margin: 10px;
+  width: calc(100% - 150px);
+  max-width: 600px;
+  min-width: 150px;
+  margin-left: 20px;
+}
+/*___________________________section form_____________________________________*/
+.form-section {
+  background-color: #a29d7f;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 49%;
+  height: auto;
+  min-width: 250px;
+  margin: 100px auto;
+}
+
+.tittle-form {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #495057;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #726e59;
+  color: #fffcee;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #484639;
+}
+
+/*___________________________aside_____________________________________*/
+
+.l-aside{
+  grid-area: 2 / 1 / 5 / 2;
+  color: #a29d7f;
+}
+.r-aside{
+  grid-area: 2 / 5 / 5 / 6;
+  color: #a29d7f;
+}
+
+.link-aside {
+  color: #a29d7f;
+  font-size: 25px; 
+}
+.link-aside:hover {
+  color: #484639;
+}
+
+
+/*__________________________footer______________________________________*/
+.botton{
+  grid-area: 5 / 1 / 6 / 6;
+  background-color: #f8ecd4;
+  color: #726e59
+  display: ;
+  
+}
+.footer{
+  grid-area: 6 / 1 / 7 / 6;
+  background-color: #484639;
+}
+.feet{
+  color: #fffcee;
+  background-color: #d8d6c9;
+  font-size: 11px;
+  text-align: end;
+  padding-right: 10px;
+}
+.footer-div{
+  background-color: #230b00;
+}
+.footer-p{
+  background-color: #230b00;
+}
+.barrita{
+ 
+ text-align: center;
+ 
+}
+.link-footer{
+  color: #a29d7f;
+     
+     text-decoration: none;
+}
+
+/*_____________________________desktop view___________________________________*/
+
+@media (max-width: 768px) {
+}

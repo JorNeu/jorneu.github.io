@@ -22,7 +22,8 @@ body{
   font-size:16px;
   line-height:24px;
   background-color:#202020;
-  height: 100%;
+  height: 99%;
+  padding: 5px;
 }
 .container{
   width: 1170px;
@@ -123,10 +124,10 @@ body{
 profile-photo .img{
   height: 100%;
   width: 100%;
-  transition: 0.5s;
 }
 .FirstElement .profile-photo img:hover{
   transform: scale(1.2);
+  transition: 1s;
 }
 
 .profile-text{
@@ -466,11 +467,9 @@ profile-photo .img{
   .container{
     width: 750px;
   }
-  
   .roadmap{
     margin-bottom: 500px;
   }
-  
   .education-content .row .education,
   .education-content .row .internship
   {
@@ -486,7 +485,6 @@ profile-photo .img{
   .container{
     width: 80%;
     min-width: 340px;
-
     margin: 0px 5px;
     margin-left: 3vh;
   }

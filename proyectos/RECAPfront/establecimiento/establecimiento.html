@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Establecimientos</title>
+    <link rel="stylesheet" href="establecimiento.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="establecimiento.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="violeta.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Establecimientos</h1>
+
+        <table id="establecimientosTable">
+            <thead>
+                <tr>
+                    <th>ID <button onclick="sortTable('idEstablecimiento')">↑↓</button></th>
+                    <th>Nombre <button onclick="sortTable('nombre')">↑↓</button></th>
+                    <th>Razón Social <button onclick="sortTable('razonSocial')">↑↓</button></th>
+                    <th>Dirección <button onclick="sortTable('direccion')">↑↓</button></th>
+                    <th>Factor Ocupacional <button onclick="sortTable('factOcupacional')">↑↓</button></th>
+                    <th>Habilitación <button onclick="sortTable('habilitacion')">↑↓</button></th>
+                </tr>
+            </thead>
+            <tbody id="establecimientosTableBody">
+                <!-- Data rows will be inserted here -->
+            </tbody>
+        </table>
+
+        <div class="actions-bar">
+            <button id="editBtn" disabled>Editar</button>
+            <button id="deleteBtn" disabled>Eliminar</button>
+            <button id="copyBtn" disabled>Copiar</button>
+            <button id="toggleFormBtn">Agregar Establecimiento (Sticky)</button>
+        </div>
+
+        <h2 id="addEstablecimientoHeader">Agregar Establecimiento</h2>
+        <form id="EstablecimientoForm">
+            <input type="text" id="nombreEstablecimiento" placeholder="Nombre" required>
+            <input type="text" id="razonSocialEstablecimiento" placeholder="Razón Social">
+            <input type="text" id="direccionEstablecimiento" placeholder="Dirección del Establecimiento">
+            <input type="number" id="factorOcupacionalEstablecimiento" placeholder="Factor Ocupacional" required>
+            <div class="checkbox-container">
+                <input type="checkbox" id="habilitacionEstablecimiento" class="styled-checkbox">
+                <label for="habilitacionEstablecimiento">Habilitación</label>
+            </div>
+            <button type="submit">Agregar Establecimiento</button>
+        </form>
+    </div>
+</body>
+</html>

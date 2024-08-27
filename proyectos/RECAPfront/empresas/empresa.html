@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Empresas</title>
+    <link rel="stylesheet" href="empresas.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="empresas.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="azul.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Empresas</h1>
+
+        <table id="empresasTable">
+            <thead>
+                <tr>
+                    <th>ID <button onclick="sortTable('idEmpresa')">↑↓</button></th>
+                    <th>Nombre <button onclick="sortTable('nombre')">↑↓</button></th>
+                    <th>Resolución <button onclick="sortTable('resolucion')">↑↓</button></th>
+                    <th>Socio 1 <button onclick="sortTable('socio1')">↑↓</button></th>
+                    <th>Socio 2 <button onclick="sortTable('socio2')">↑↓</button></th>
+                    <th>Cant Cont<button onclick="sortTable('cantCont')">↑↓</button></th>
+                </tr>
+            </thead>
+            <tbody id="empresasTableBody">
+                <!-- Data rows will be inserted here -->
+            </tbody>
+        </table>
+
+        <div class="actions-bar">
+            <button id="editBtn" disabled>Editar</button>
+            <button id="deleteBtn" disabled>Eliminar</button>
+            <button id="copyBtn" disabled>Copiar</button>
+            <button id="toggleFormBtn">Agregar Empresa (Sticky)</button>
+        </div>
+
+        <h2 id="addEmpresaHeader">Agregar Empresa</h2>
+        <form id="empresaForm">
+            <input type="text" id="nombreEmpresa" placeholder="Nombre" required>
+            <input type="text" id="resolucionEmpresa" placeholder="Resolución" required>
+            <input type="text" id="socio1Empresa" placeholder="Socio 1">
+            <input type="text" id="socio2Empresa" placeholder="Socio 2">
+            <button type="submit">Agregar Empresa</button>
+        </form>
+    </div>
+</body>
+</html>

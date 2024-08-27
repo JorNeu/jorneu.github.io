@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa-Controladores contratos</title>
+    <link rel="stylesheet" href="contratos.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="contratos.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="rojo.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Contratos Empresa-Controladores</h1>
+
+        <table id="contratosTable">
+            <thead>
+                <tr>
+                    <th>ID <button onclick="sortTable('idContratos')">↑↓</button></th>
+                    <th>Alta <button onclick="sortTable('alta')">↑↓</button></th>
+                    <th>Vencimiento <button onclick="sortTable('vencimiento')">↑↓</button></th>
+                    <th>ID Empresa <button onclick="sortTable('idEmpresa')">↑↓</button></th>
+                    <th>ID Controlador <button onclick="sortTable('idControlador')">↑↓</button></th>
+                </tr>
+            </thead>
+            <tbody id="contratosTableBody">
+                <!-- Data rows will be inserted here -->
+            </tbody>
+        </table>
+
+        <div class="actions-bar">
+            <button id="editBtn" disabled>Editar</button>
+            <button id="deleteBtn" disabled>Eliminar</button>
+            <button id="copyBtn" disabled>Copiar</button>
+            <button id="toggleFormBtn">Agregar Contrato (Sticky)</button>
+            <button id="toggleEditBtn" style="display:none;">Cancelar Edición</button>
+        </div>
+        <div id="errorContainer" style="color: red; display: none;"></div> <!-- Contenedor de errores -->
+
+        <h2 id="addContratoHeader">Agregar Contrato</h2>
+        <form id="contratoForm">
+            <input type="date" id="alta" placeholder="Fecha de Alta" required>
+            <input type="date" id="vencimiento" placeholder="Fecha de Vencimiento" required>
+            <input type="number" id="idEmpresa" placeholder="ID Empresa" required>
+            <input type="number" id="idControlador" placeholder="ID Controlador" required>
+            <button id="formSubmitBtn" type="submit" onclick="handleFormSubmit(event)">Agregar Contrato</button>
+        </form>
+    </div>
+</body>
+</html>

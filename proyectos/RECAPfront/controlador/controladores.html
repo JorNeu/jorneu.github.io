@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de controladors</title>
+    <link rel="stylesheet" href="controladores.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="controladores.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="verde.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de controladores</h1>
+
+        <table id="controladorsTable">
+            <thead>
+                <tr>
+                    <th>ID <button onclick="sortTable('idcontrolador')">↑↓</button></th>
+                    <th>Nombre <button onclick="sortTable('nombre')">↑↓</button></th>
+                    <th>Apellido <button onclick="sortTable('apellido')">↑↓</button></th>
+                    <th>DNI<button onclick="sortTable('dni')">↑↓</button></th>
+                    <th>NumHabilitacion<button onclick="sortTable('numHabilitacion')">↑↓</button></th>
+                    <th>Contratos<button onclick="sortTable('contratos')">↑↓</button></th>
+                </tr>
+            </thead>
+            <tbody id="controladorTableBody">
+                <!-- Data rows will be inserted here -->
+            </tbody>
+        </table>
+
+        <div class="actions-bar">
+            <button id="editBtn" disabled>Editar</button>
+            <button id="deleteBtn" disabled>Eliminar</button>
+            <button id="copyBtn" disabled>Copiar</button>
+            <button id="toggleFormBtn">Agregar controlador (Sticky)</button>
+        </div>
+
+        <h2 id="addcontroladorHeader">Agregar controlador</h2>
+        <form id="controladorForm">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+            <input type="text" id="dni" placeholder="DNI" required>
+            <input type="text" id="numHabilitacion" placeholder="Num. Habilitacion">
+            <button type="submit">Agregar controlador</button> 
+        </form>
+    </div>
+</body>
+</html>

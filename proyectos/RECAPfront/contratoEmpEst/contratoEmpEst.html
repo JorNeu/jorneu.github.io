@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa-Establecimiento contratos</title>
+    <link rel="stylesheet" href="contratoEmpEst.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="contratoEmpEst.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="naranja.ico">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestión de Contratos Empresa-Establecimiento</h1>
+
+        <table id="contratosTable">
+            <thead>
+                <tr>
+                    <th>ID <button onclick="sortTable('idContratoEmpEst')">↑↓</button></th>
+                    <th>Alta <button onclick="sortTable('alta')">↑↓</button></th>
+                    <th>Vencimiento <button onclick="sortTable('vencimiento')">↑↓</button></th>
+                    <th>ID Empresa <button onclick="sortTable('idEmpresa')">↑↓</button></th>
+                    <th>ID Establecimiento <button onclick="sortTable('idEstablecimiento')">↑↓</button></th>
+                    <th>Observaciones <button onclick="sortTable('observaciones')">↑↓</button></th>
+                </tr>
+            </thead>
+            <tbody id="contratosTableBody">
+                <!-- Data rows will be inserted here -->
+            </tbody>
+        </table>
+
+        <div class="actions-bar">
+            <button id="editBtn" disabled>Editar</button>
+            <button id="deleteBtn" disabled>Eliminar</button>
+            <button id="copyBtn" disabled>Copiar</button>
+            <button id="toggleFormBtn">Agregar Contrato (Sticky)</button>
+            <button id="toggleEditBtn" style="display:none;">Cancelar Edición</button>
+        </div>
+        <div id="errorContainer" style="color: rgb(202, 117, 19); display: none;"></div> <!-- Contenedor de errores -->
+
+        <h2 id="addContratoHeader">Agregar Contrato</h2>
+        <form id="contratoForm">
+            <input type="date" id="alta" placeholder="Fecha de Alta" required>
+            <input type="date" id="vencimiento" placeholder="Fecha de Vencimiento" required>
+            <input type="number" id="idEmpresa" placeholder="ID Empresa" required>
+            <input type="number" id="idEstablecimiento" placeholder="ID Establecimiento" required>
+            <input type="text" id="observaciones" placeholder="Observaciones">
+            <button id="formSubmitBtn" type="submit">Agregar Contrato</button>
+        </form>
+    </div>
+</body>
+</html>
